@@ -1,0 +1,11 @@
+.flow-content > * + * {
+  margin-top: var(--flow-space, 1rem);
+}
+.flow {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  @media (min-width: 50em) {
+    flex-direction: row;
+  }
+}

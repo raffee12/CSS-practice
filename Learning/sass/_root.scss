@@ -1,0 +1,19 @@
+:root {
+  // primary clrs
+  --clr-drk-magenta: hsl(300, 43%, 22%);
+  --clr-soft-pink: hsl(333, 80%, 67%);
+  // neutrals
+  --clr-drk-grey: hsl(303, 10%, 53%);
+  --clr-light-grey: hsl(300, 24%, 96%);
+  --clr-white: hsl(0, 0%, 100%);
+  // fonts
+  --ff-primary: "spartan", sans-serif;
+
+  --fs-400: 0.8125rem;
+  --fs-500: 0.9625rem;
+  --fs-900: 2rem;
+
+  @media (min-width: 50em) {
+    --fs-900: 3rem;
+  }
+}

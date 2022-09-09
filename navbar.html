@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navbar with some hamburger menu</title>
+  </head>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=DynaPuff:wght@400;500&display=swap");
+    *,
+    *::after,
+    *::before {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      min-height: 100vh;
+      display: grid;
+      /* background-image: linear-gradient(black, purple); */
+      background: #6d7683;
+      background: #0b9e36;
+      background: #ee9cec;
+      background: #49540e;
+      font-family: "DynaPuff", cursive;
+      place-content: center;
+      color: white;
+      isolation: isolate;
+      overflow: hidden;
+    }
+    body::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+
+      background-image: url("https://media.istockphoto.com/photos/interior-design-of-living-room-with-armchair-on-empty-light-cream-picture-id1345922428?b=1&k=20&m=1345922428&s=170667a&w=0&h=Pn76NZjLf16KSoGmLA9FuRdlskie-g6TnSGWuT-CfpY=");
+
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      object-fit: contain;
+      z-index: -1;
+      opacity: 0.4;
+    }
+    .content {
+      width: 20rem;
+      margin: 300px auto;
+      background: #5b1746;
+      background: #b9db90;
+      /* background: -webkit-linear-gradient(to right, #c6426e, #642b73);
+      background: linear-gradient(to right, #c6426e, #642b73); */
+
+      padding: 1.5rem;
+    }
+    .content :where(h1, p) {
+      filter: drop-shadow(0.1em 0.1em 2px);
+      /* color: #ec38bc;
+      color: #03001e; */
+      color: #ff4f94;
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+    .content h1 {
+      color: #80284b;
+      word-spacing: 2px;
+      font-weight: bold;
+      font-size: 1.8rem;
+      letter-spacing: 0.5rem;
+    }
+    ul {
+      list-style: none;
+    }
+    a {
+      text-decoration: none;
+    }
+    header {
+      position: fixed;
+      width: 100%;
+      text-align: center;
+      background: palevioletred;
+      background: #1ceb59;
+      background: #6b326a;
+      background: #b6d424;
+    }
+    .logo {
+      color: #f06;
+      font-size: 3rem;
+      filter: drop-shadow(0.1em 0.1em 1px);
+    }
+    nav {
+      position: absolute;
+
+      width: 100%;
+      text-align: left;
+      top: 100%;
+      background: palevioletred;
+      transform: scale(1, 0);
+      transition: transform 150ms;
+    }
+    nav li {
+      margin-block: 1rem;
+      margin-left: 10px;
+    }
+    nav a {
+      color: white;
+      font-size: 20px;
+      opacity: 0;
+
+      transition: opacity 150ms ease-out 250ms;
+      position: relative;
+    }
+    nav a::after {
+      content: "";
+      position: absolute;
+      display: block;
+
+      height: 3px;
+      left: 0;
+      right: 0;
+
+      background-color: #f06;
+      border-radius: 15px;
+      transform: scale(0, 1);
+      transition: transform ease-in-out 250ms;
+    }
+    nav a:hover::after {
+      transform: scale(1, 1);
+      transition: transform ease-in-out 250ms;
+    }
+    .navbar-toggle:checked ~ nav a {
+      opacity: 1;
+      transition: opacity 150ms ease-out 250ms;
+    }
+    .navbar-toggle {
+      display: none;
+    }
+    .navbar-toggle:checked ~ nav {
+      transform: scale(1, 1);
+      transition: transform 250ms ease-out;
+    }
+    .navbar-toggle:checked .content {
+      margin-top: 300px;
+    }
+    .nav-toggle-label {
+      position: absolute;
+      top: 0;
+      left: 10px;
+      display: flex;
+      align-items: center;
+      height: 100%;
+    }
+    .nav-toggle-label span,
+    .nav-toggle-label span::after,
+    .nav-toggle-label span::before {
+      display: block;
+      width: 2rem;
+      height: 2px;
+      background-color: white;
+      position: relative;
+    }
+    .nav-toggle-label span::after,
+    .nav-toggle-label span::before {
+      content: "";
+      position: absolute;
+    }
+    .nav-toggle-label span::after {
+      bottom: 7px;
+    }
+    .nav-toggle-label span::before {
+      top: 7px;
+    }
+    @media (min-width: 800px) {
+      .nav-toggle-label {
+        display: none;
+      }
+      nav a {
+        opacity: 1;
+      }
+      header {
+        display: grid;
+        grid-template-columns: 1fr auto minmax(600px, 1fr) 1fr;
+        place-items: center;
+        padding: 1.5rem;
+      }
+      nav {
+        all: unset;
+        grid-column: 3 / 4;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+      }
+      .logo {
+        grid-column: 2 /3;
+        place-items: center;
+      }
+      .list-items {
+        display: flex;
+        gap: 15px;
+        justify-content: end;
+        align-items: center;
+      }
+      .content {
+        width: 50rem;
+      }
+    }
+  </style>
+  <body>
+    <header>
+      <h1 class="logo">Logo</h1>
+      <input type="checkbox" class="navbar-toggle" id="navbar-toggle" />
+      <nav>
+        <ul class="list-items">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Menu</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </nav>
+      <label for="navbar-toggle" class="nav-toggle-label">
+        <span></span>
+      </label>
+    </header>
+    <section>
+      <div class="content">
+        <h1>This is a simple website</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
+          dolores, sed voluptas laudantium rerum cum ut voluptatibus voluptates
+        </p>
+      </div>
+    </section>
+  </body>
+</html>

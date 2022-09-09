@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Just for fun</title>
+    <style>
+      :root {
+        --gradient: linear-gradient(
+          45deg,
+          #654ea3,
+          #eaafc8,
+          #654ea3,
+          #eaafc8,
+          #654ea3
+        );
+      }
+      body {
+        display: grid;
+        place-content: center;
+
+        min-height: 100vh;
+      }
+      .container {
+        display: flex;
+        width: 60%;
+        margin: auto;
+        background-image: var(--gradient);
+        transition: background-position 1s ease-in;
+        background-size: 300%;
+        background-position: left;
+        border: 1px solid #d50d61;
+        color: #333;
+        padding: 5rem;
+        gap: 2rem;
+        animation: bg 20s infinite alternate;
+      }
+      .container:hover,
+      .container:focus {
+        background-position: right;
+      }
+      .content {
+        margin-right: 10px;
+        background-color: #fff;
+        padding: 1rem;
+        box-shadow: 0 0 3rem rgba(0, 0, 0, 0.15);
+      }
+      h1 {
+        background-image: var(--gradient);
+        -webkit-background-clip: text;
+        color: transparent;
+        font-size: 4rem;
+        font-weight: bold;
+        background-size: 400%;
+      }
+      @keyframes bg {
+        0% {
+          background-position: left;
+        }
+
+        100% {
+          background-position: right;
+        }
+      }
+      .content:nth-child(2) {
+        transform: translateY(30px);
+      }
+      .content:nth-child(3) {
+        transform: translateY(60px);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="content">
+        <h1>Hello There</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro,</p>
+      </div>
+      <div class="content">
+        <h1>Hello There</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro,</p>
+      </div>
+      <div class="content">
+        <h1 c>Hello There</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro,</p>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+what have learn till from the start
+
+how to steel css resets it makes my way life little bit easier
+
+I am using scss it gives css a lot more super power and I think I could build the environment // its easy just keep this in mind
+
+how to set up some custom properties
+
+for setting up some custom properties for clrs i find a lot more challenging
+clrs for primary kevin is going like --clr-primary-400 where he is adding darker clrs from the list i think its cool but actually implenting this clr i might running confusing what the clr really is it could take up my time that's why I am going a more like straight forward
+
+// in order to setting up custom properties we are following fonts weights like default font weight is 400 we are guessing our font size for default font weights we will gonna be fs-400
+and we r following this thing throught out the seeting up our font sizes
+it is important creating cards our cards elms should be kept in ul tags it could follow along a class just for best practing with styling
+
+//this song is called thousand years but my love for this song would for a thousand years ,, no matter how many times I hear the feelings of this song immuteable my playlists whole incomple
+without it i only believe getting in lost go deeper showering my souls in this song
+
+why we do min width it is beacuse suppose you are giving air on a ballon at a several point you have stop beacuse avobe that it could be breaked
+simler we could think in web desinging we are stretching our website at a specific points we need at something or take something out of from it
+or even more specific it means specifice modification only available at that position or at that size under that it has not gona available
+
+anyway in short just kept in mind
+min width for desktop // broad
+max width for mobile // short

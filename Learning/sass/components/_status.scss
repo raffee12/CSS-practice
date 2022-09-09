@@ -1,0 +1,40 @@
+.quotes {
+  li {
+    &:nth-of-type(2) {
+      transform: translateY(3rem);
+    }
+    &:nth-of-type(3) {
+      transform: translateY(6rem);
+    }
+  }
+}
+
+blockquote {
+  --spacer: 2rem;
+
+  background-color: var(--clr-drk-magenta);
+  color: var(--clr-light-grey);
+  padding: 2rem;
+  text-align: left;
+  width: 25rem;
+  margin: 0 auto;
+  border-radius: 10px;
+  .card-item {
+    display: flex;
+    align-items: center;
+    img {
+      width: 3rem;
+      border-radius: 50%;
+      margin-right: var(--spacer);
+    }
+    .name {
+      font-weight: 800;
+    }
+    .status {
+      color: var(--clr-soft-pink);
+    }
+  }
+  .quote {
+    margin-top: var(--spacer);
+  }
+}

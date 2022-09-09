@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Magazine</title>
+  </head>
+  <body>
+    <main>
+      <article class="flow">
+ <div class="article-img">
+    <img   src='https://images.unsplash.com/photo-1661413612950-38e645dd9862?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyNHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60' >
+ </div>
+        <h1>Chip Kidd</h1>
+        <p class="lead">
+ Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque molestiae illo aliquam vitae sed, quos eligendi ab, dolorem pariatur 
+
+        </p>
+        <div class="artcle-body">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque enim
+            sed illum impedit maxime unde minima? Atque similique deserunt id
+            deleniti mollitia aliquid exercitationem laborum architecto rem
+          
+          </p>
+          <p>
+            Nobis itaque dicta reprehenderit quod iusto aliquam dolorum. Quis
+            doloremque dolore, omnis dolorum nesciunt totam alias repudiandae
+            fuga quisquam quam nulla perspiciatis. Nihil vero voluptate
+            amus. Delectus, consequuntur!
+          </p>
+          <p>
+            Tempora quibusdam pariatur dolorem, adipisci laboriosam quisquam
+            placeat veniam! Provident ipsam eveniet blanditiis, cum dicta
+            consequuntur! Ipsa error similique  totam.
+            <blockquote>Lorem ipsum dolor sit amet consectetur </blockquote>
+          </p>
+          <p>
+            Aspernatur eum molestias quam ea? Ratione sapiente porro magni ea
+          
+      
+          </p>
+        </div>
+      </article>
+    </main>
+  </body>
+  <script>
+
+// const num = [10, 10, 20, 40, 50, 60, 60, 60]
+// const dub = num.filter((value, index, arry)=>{
+//   return arry.indexOf(value) !==index
+// })
+// console.log(dub)
+
+
+const vowels = ['a', 'i', 'o','u','e' ]
+const vowles = (sen)=> {
+  let count = 0;
+
+  const letters = Array.from(sen)
+  letters.forEach((value, index, Array)=> {
+console.log(value)
+  })
+}
+console.log(('Hi I hope you are okey'))
+// const countVowesl=(sen)=>{
+//   let count = 0;
+  
+// const letters = Array.from(sen);
+// letters.forEach((value)=> {
+// if(vowels.includes(value)){
+//   count++
+// }
+// })
+// return count
+// }
+// console.log((countVowesl('Better Man , Listen to her')))
+const range = (start, stop, step) => Array.from({ length: (stop - start) / step + 1}, (_, i) => start + (i * step));
+console.log(range('A'.charCodeAt(0), 'Z'.charCodeAt(0), 1).map((x) => String.fromCharCode(x)))
+
+const counting= (strt, stp, step)=> Array.from({length: (stop - strt) / step + 1} , (_, i)=> strt + (i * step))
+console.log(counting('A'.charCodeAt(0), 'Z'.charCodeAt(0), 1).map((x)=> String.fromCharCode(x)))
+
+  </script>
+</html>
